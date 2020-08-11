@@ -21,11 +21,12 @@ var question = [
 var person = ['El mentee', 'El mentor', 'Todos'];   
 
 function getRandomQuestion() {
-  var randomQuestion = question[Math.floor(Math.random() * question.length)];
-  $("#question").html('<span class="glyphicon glyphicon-question-sign"></span><strong> La pregunta es: </strong>' + question[Math.floor(Math.random() * question.length)]);
-  
-  $("#person").html('<span class="glyphicon glyphicon-user"></span><strong> La persona que responde: </strong>' + person[Math.floor(Math.random() * person.length)]);
-}
-
-function getRandomPerson() {
+var pos = Math.floor(Math.random() * question.length);
+	$("#question").html('<span class="glyphicon glyphicon-question-sign"></span><strong> La pregunta es: </strong>' + question[pos]);
+	console.log(question);
+	question.splice(pos,1);
+	console.log(question);
+	pos = Math.floor(Math.random() * person.length);
+	$("#person").html('<span class="glyphicon glyphicon-user"></span><strong> La persona que responde: </strong>' + person[pos]);
+	person.splice(pos,1);
 }

@@ -21,10 +21,15 @@ var question = [
 var person = ['El mentee', 'El mentor', 'Todos'];   
 
 function getRandomQuestion() {
-var pos = Math.floor(Math.random() * question.length);
-	$("#question").html('<span class="glyphicon glyphicon-question-sign"></span><strong> La pregunta es: </strong>' + question[pos]);
-	question.splice(pos,1);
-	pos = Math.floor(Math.random() * person.length);
-	$("#person").html('<span class="glyphicon glyphicon-user"></span><strong> La persona que responde: </strong>' + person[pos]);
-	person.splice(pos,1);
+	if (question.length > 0){	
+		var pos = Math.floor(Math.random() * question.length);
+		$("#question").html('<span class="glyphicon glyphicon-question-sign"></span><strong> La pregunta es: </strong>' + question[pos]);
+		question.splice(pos,1);
+		pos = Math.floor(Math.random() * person.length);
+		$("#person").html('<span class="glyphicon glyphicon-user"></span><strong> La persona que responde: </strong>' + person[pos]);
+	}
+	else{
+		$("#question").hide();
+		$("#person").html('<span class="glyphicon glyphicon-star"></span><strong> Felicitaciones </strong> Ya contestaste todas las preguntas.');
+	}
 }

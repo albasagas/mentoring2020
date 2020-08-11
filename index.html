@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">	
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="random.js"></script>
+	<style>
+		.jumbotron {
+			  background-image: url("img/programa.jpg");
+			  background-size: cover;
+			  color: white;
+			}
+		.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+			background-color: #4F17AB !important;
+			}
+		.alert-orange{
+		  background-color:#ffc29e;
+		  color:#cc550e;
+		}
+		.alert-blue{
+		  background-color:#d1ebf0;
+		  color:#10aecc;
+		}
+	</style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Programa de Mentoring</h1>
+  <h2>Certifícate con PMI Guatemala en este 2020</h2>
+</div>
+<div class="container text-center">      
+	<h3>KickOff</h3>
+	<h4>Conoce a tu match, Lunes 17 de agosto</h4>
+	<p>Para conocer mejor a tu match, te recomendamos repasar las siguientes preguntas. Anota la información que consideres importante</p>
+</div>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary btn-lg" onclick="getRandomQuestion()">Genera pregunta aleatoria</button>		
+    </div>
+	<div class="col-sm-6">
+		<h4>Contesta lo siguiente</h4>
+		<div id="question" class="alert alert-orange">
+			<span class="glyphicon glyphicon-question-sign"></span> 
+			<strong>La pregunta es:</strong> 
+		</div>
+
+		<div id="person" class="alert alert-blue">
+			<span class="glyphicon glyphicon-user"></span> 
+			<strong>Contesta:</strong> 
+		</div> 
+      
+    </div>
+  </div>
+  <div class="row">
+    
+  </div>
+</div>
+
+
+</body>
+</html>
